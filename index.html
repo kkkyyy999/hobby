@@ -5,21 +5,56 @@
   <title>WEB - CSS</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+<script>
+  function nightDayHandler(self){
+    var target = document.querySelector('body');
+    if(self.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      self.value = 'day';
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'powderblue';
+        i = i + 1;
+      }
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      self.value = 'night';
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'blue';
+        i = i + 1;
+      }
+    }
+  }
+  </script>
 </head>
+
 <body>
-  <h1><a href="index.html">WEB</a></h1>
+  <h1><a href="index.html">대출상담</a></h1>
+  <input id="night_day" type="button" value="night" onclick="
+      nightDayHandler(this);
+    ">
+
   <div id="grid">
     <ol>
-      <li><a href="1.html">HTML</a></li>
-      <li><a href="2.html">CSS</a></li>
+      <li><a href="1.html">대출상품</a></li>
+      <li><a href="2.html">대출금리</a></li>
       <li><a href="3.html">JavaScript</a></li>
     </ol>
     <div id="article">
         <h2>CSS</h2>
         <p>
+          <li>  GGG </li>
           Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language.[1] Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any XML document, including plain XML, SVG and XUL, and is applicable to rendering in speech, or on other media. Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.
+
+
         </p>
       </div>
   </div>
+
   </body>
   </html>
